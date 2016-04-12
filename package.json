@@ -1,0 +1,33 @@
+{
+  "name": "fis3-www-demo",
+  "version": "0.0.1",
+  "description": "基于fis3的PC端纯静态解决方案",
+  "author": "Fancy <fancyboynet@gmail.com>",
+  "repository": "https://github.com/fancyboynet/fis3-www-demo.git",
+  "license": "BSD",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scripts/start.js",
+    "dev": "node scripts/develop.js",
+    "prod": "node scripts/product.js"
+  },
+  "devDependencies": {
+    "buffer": "^4.5.1",
+    "chalk": "^1.1.3",
+    "fis-parser-node-sass": "^0.1.9",
+    "fis-parser-utc": "0.0.2",
+    "fis-postprocessor-autoprefixer": "0.0.5",
+    "fis3-hook-commonjs": "^0.1.14",
+    "fis3-hook-node_modules": "^2.0.15",
+    "fis3-parser-html-uri": "^1.0.1",
+    "fis3-postpackager-loader": "^1.0.17",
+    "is-buffer": "^1.1.3",
+    "process": "^0.11.2",
+    "shelljs": "^0.6.0"
+  },
+  "dependencies": {
+    "html5shiv": "^3.7.3",
+    "jquery": "^1.11.3",
+    "normalize.css": "^4.0.0"
+  }
+}

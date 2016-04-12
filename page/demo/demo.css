@@ -1,0 +1,9 @@
+/**
+ * @require app/reset/reset
+ */
+.mod-one{
+    color: red;
+}
+.mod-two{
+    color: yellow;
+}
