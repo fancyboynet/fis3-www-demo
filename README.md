@@ -1,9 +1,14 @@
 # 基于fis3的PC端纯静态解决方案
 
+## 采用fis3-hook-node_modules的组件方案
+
+[fis3-hook-node_modules](https://github.com/fex-team/fis3-hook-node_modules)
+
 ## 准备
 
     ```
     $ npm install -g fis3
+    $ npm install process buffer is-buffer --save-dev
     $ npm install
    
     ```
@@ -12,7 +17,7 @@
 ## 安装第三方模块时请同时写入配置文件  
 
     ```
-    fis3 install jquery@1.11.3 --save
+    fis3 install jquery@2.1.0 --save
     
     ```
     
@@ -43,13 +48,6 @@
    3. 资源文件采取百度的[fis3](https://github.com/fex-team/fis3)构建，维护之前请参考相关资料
    4. 构建输出目录为根目录下的**output**目录
    
-## 构建注意
-   新增文件时可能需要重新运行develop.sh来对新增的文件增加监听
-   
-## 关于自适应
-   1. 效果图统一给1080p;
-   2. 采用rem的自适应方式，注意查看头部的相关脚本
-   3. css中按效果图量出的尺寸除以100设置，例如效果图量的某宽度是500px,则css中设置5rem;
    
 ## 目录说明
 [参考](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-commonly-used.md)
