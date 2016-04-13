@@ -5,7 +5,14 @@ let configBuild = require('./config/build.json');
 let staticRoot = configBuild.static_root; //实际静态资源根目录
 let tplRoot = configBuild.tpl_root; //模版根目录
 
-fis.hook('commonjs');
+fis.hook('commonjs', {
+    packages: [
+        {
+            name: 'app',
+            location: './components/app'
+        }
+    ]
+});
 
 
 //排除不需要产出的目录
@@ -39,14 +46,7 @@ fis.match('/node_modules/**.js', {
     useSameNameRequire: true
 });
 
-fis.match('/{page, components}/**', {
-    isMod: true,
-    useSameNameRequire: true
-});
-
-//自定义组件用短路径
-fis.match('/components/(**).{js,css}', {
-    id : '$1',
+fis.match('/{page,components}/**', {
     isMod: true,
     useSameNameRequire: true
 });

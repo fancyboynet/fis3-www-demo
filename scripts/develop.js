@@ -13,6 +13,6 @@ if (!shell.which('fis3')) {
 }
 
 shell.rm('-rf', configBuild.output + configBuild.static_root + '/*');
-shell.rm('-rf', configBuild.output + '/' + configBuild.tpl_root+ '/*');
+shell.rm('-rf', configBuild.output + configBuild.tpl_root+ '/*');
 shell.exec('fis3 release -cd ' + configBuild.output);
 
