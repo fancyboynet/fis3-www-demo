@@ -21,6 +21,8 @@
     "fis3-hook-node_modules": "^1.0.16",
     "fis3-parser-html-uri": "^1.0.1",
     "fis3-postpackager-loader": "^1.0.17",
+    "fis3-preprocessor-js-require-css": "^0.1.0",
+    "fis3-preprocessor-js-require-file": "^0.1.0",
     "is-buffer": "^1.1.3",
     "process": "^0.11.2",
     "shelljs": "^0.6.0"

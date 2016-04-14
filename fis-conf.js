@@ -87,12 +87,22 @@ fis.match('**.css', {
     })
 });
 
+// 添加css和image加载支持
+fis.match('*.js', {
+    preprocessor: [
+        fis.plugin('js-require-css'),
+        fis.plugin('js-require-file', {
+            useEmbedWhenSizeLessThan: 10 * 1024 // 小于10k用base64
+        })
+    ]
+});
+
 // // 用 node-sass 解析
 // fis.match('*.scss', {
 //     parser: [
 //         fis.plugin('node-sass', {
 //             includePaths: [
-//                 'common/scss'
+//                 'components'
 //             ] || [],
 //             sourceMap : true
 //         })
@@ -102,6 +112,7 @@ fis.match('**.css', {
 // fis.match('**/_*.scss', {
 //     release : false
 // });
+
 
 fis.match('::packager', {
     // npm install [-g] fis3-postpackager-loader
