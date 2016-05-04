@@ -5,14 +5,7 @@ let configBuild = require('./config/build.json');
 let staticRoot = configBuild.static_root; //实际静态资源根目录
 let tplRoot = configBuild.tpl_root; //模版根目录
 
-fis.hook('commonjs', {
-    packages: [
-        {
-            name: 'app',
-            location: './components/app'
-        }
-    ]
-});
+fis.hook('commonjs');
 
 
 //排除不需要产出的目录
@@ -125,7 +118,7 @@ fis.match('::packager', {
 });
 
 //数据接口增加实际前缀
-fis.match('/components/app/api/config.js', {
+fis.match('/widget/api/config.js', {
     parser: function (content, file, opt) {
         // 只对 html 类文件进行处理
         if (!file.isJsLike){
