@@ -50,7 +50,8 @@
    
    
 ## 目录说明
-[参考](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-commonly-used.md)
+[参考1](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-commonly-used.md)
+[参考2](https://github.com/fex-team/fis3-solutions/blob/master/intro.md#目录规范-1)
 
 ### 源码目录
 
@@ -64,13 +65,16 @@
 │   └── POST_LIST.json
 ├── page
 │   └── index.html
-├── common
+├── static
 │   └── lib
 ├── test
-├── components
+├── widget
 │   ├── header
 │   ├── nav
 │   └── ui
+├── components
+│   ├── jquery
+│   └── normalize.css
 └── node_modules
     ├── jquery
     └── normalize.css   
@@ -78,14 +82,15 @@
 ```
 
 1. page 放置页面模板
-2. components 应用内组件
-3. node_modules npm 生态组件
-4. test 一些测试数据、用例
-5. common 放一些组件公用的静态资源
-6. common/lib 放置一些非模块化公共库，例如 mod.js 等
-7. config 配置目录
-8. mock 本地模拟数据目录，只在本地开发环境时才存在
-9. scripts 工具类目录，只在本地开发环境时才存在
+2. components fis-components生态组件,尽量用npm生态
+3. node_modules npm生态组件
+4. widget 应用内组件
+5. test 一些测试数据、用例
+6. static 放一些非组件化的公用的静态资源
+7. static/lib 放置一些非模块化公共库，例如 mod.js 等
+8. config 配置目录
+9. mock 本地模拟数据目录，只在本地开发环境时才存在
+10. scripts 工具类目录，只在本地开发环境时才存在
 
 ### 编译产出目录
 

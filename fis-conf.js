@@ -20,6 +20,7 @@ fis.set('project.ignore', fis.get('project.ignore').concat([
     'doc/**',
     'config/**',
     'scripts/**',
+    'component.json',
     'package.json',
     'test/**'
 ]));
@@ -41,17 +42,17 @@ fis
 
 
 //npm 组件
-fis.match('/node_modules/**.js', {
+fis.match('/{node_modules,components,widget}/**.js', {
     isMod: true,
     useSameNameRequire: true
 });
 
-fis.match('/{page,components}/**', {
+fis.match('/page/**', {
     isMod: true,
     useSameNameRequire: true
 });
 
-fis.match('/common/**', {
+fis.match('/static/**', {
     isMod: false,
     useSameNameRequire: false
 });

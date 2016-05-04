@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var STRINGS = require('app/strings/strings');
+var STRINGS = require('/widget/strings/strings');
 var modOne = require('./modules/mod-one');
 var modTwo = require('./modules/mod-two');
 
