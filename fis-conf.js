@@ -174,7 +174,7 @@ fis.media('prod')
     .match('::packager', {
         postpackager: fis.plugin('loader', {
             allInOne: {
-                ignore: 'node_modules/jquery/**'
+                ignore: ['static/lib/**', 'node_modules/jquery/**']
             }
         }),
         packager: fis.plugin('map'),
