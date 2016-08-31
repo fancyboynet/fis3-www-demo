@@ -73,12 +73,16 @@ fis.match('**.tpl', {
     isMod:false //避免被当作组件包装
 });
 
-//autoprefixer
 fis.match('**.css', {
     parser: fis.plugin('css-url-hash'),
     postprocessor: fis.plugin('autoprefixer', {
         "browsers": ["last 2 versions", "ie 8"]
     })
+});
+
+fis.match('node_modules/**.css', {
+    parser: null,
+    postprocessor: null
 });
 
 // 添加css和image加载支持
@@ -141,13 +145,6 @@ fis.hook('node_modules', {
 
 // optimize
 fis.media('prod')
-    //暂时关闭hash值，因为还没想好前端页面hash变化后，服务端页面如何更好地做对应更改
-    //.match('*.{css,js}', {
-    //    useHash : true
-    //})
-    //.match('image', {
-    //    useHash: true
-    //})
     .match('*.js', {
         optimizer: fis.plugin('uglify-js', {
             mangle: {
