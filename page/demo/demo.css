@@ -3,7 +3,17 @@
  */
 .mod-one{
     color: red;
+    font-size: 100px;
 }
 .mod-two{
-    color: yellow;
+    color: lime;
+    font-size: 100px;
+}
+.mod-google{
+    width: 1000px;
+    height: 500px;
+    /*background: url("./images/google.jpg");*/
+    background: url("//www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }

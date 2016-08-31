@@ -20,7 +20,7 @@ else{
 }
 
 shell.exec('fis3 server stop -p ' + configBuild.port);
-shell.exec('fis3 server start --root ' + configBuild.output + ' -p ' + configBuild.port);
+shell.exec('fis3 server start --no-browse --root ' + configBuild.output + ' -p ' + configBuild.port);
 shell.exec('fis3 release -wLcd ' + configBuild.output);
 
 

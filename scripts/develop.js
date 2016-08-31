@@ -6,7 +6,6 @@ let path = require('path');
 
 configBuild.output = path.resolve(__dirname, '../config/build.json', configBuild.output);
 
-
 if (!shell.which('fis3')) {
     console.log(chalk.red('请先安装fis3'));
     return;

@@ -1,5 +1,4 @@
 "use strict";
-
 let configBuild = require('./config/build.json');
 
 let staticRoot = configBuild.static_root; //实际静态资源根目录
@@ -76,6 +75,7 @@ fis.match('**.tpl', {
 
 //autoprefixer
 fis.match('**.css', {
+    parser: fis.plugin('css-url-hash'),
     postprocessor: fis.plugin('autoprefixer', {
         "browsers": ["last 2 versions", "ie 8"]
     })
