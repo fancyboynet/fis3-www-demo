@@ -19,7 +19,7 @@
     "fis-postprocessor-autoprefixer": "0.0.5",
     "fis3-hook-commonjs": "^0.1.25",
     "fis3-hook-node_modules": "^1.1.7",
-    "fis3-parser-css-url-hash": "0.0.3",
+    "fis3-parser-css-url-hash": "0.0.4",
     "fis3-parser-html-uri": "^1.0.1",
     "fis3-postpackager-loader": "^1.5.3",
     "fis3-preprocessor-js-require-css": "^0.1.0",
