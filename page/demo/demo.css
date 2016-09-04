@@ -13,8 +13,8 @@
     width: 1000px;
     height: 500px;
     /*background: url("./images/google.jpg");*/
-    /*background: url("//www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");*/
-    background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+    background: url("//www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+    /*background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");*/
     background-size: contain;
     background-repeat: no-repeat;
 }
