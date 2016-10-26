@@ -95,21 +95,12 @@ fis.match('*.js', {
     ]
 });
 
-// // 用 node-sass 解析
-// fis.match('*.scss', {
-//     parser: [
-//         fis.plugin('node-sass', {
-//             includePaths: [
-//                 'components'
-//             ] || [],
-//             sourceMap : true
-//         })
-//     ],
-//     postprocessor: fis.plugin('autoprefixer')
-// });
-// fis.match('**/_*.scss', {
-//     release : false
-// });
+//babel
+fis.match('/{page,widget}/**.js', {
+    parser: fis.plugin('babel-5.x', {
+        stage: 3
+    })
+});
 
 
 fis.match('::packager', {
