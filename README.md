@@ -6,41 +6,35 @@
 
 ## 准备
 
-    ```
     $ npm install -g fis3
     $ npm install process buffer is-buffer --save-dev
     $ npm install
-   
-    ```
+    
 
    
 ## 安装第三方模块时请同时写入配置文件  
 
-    ```
-    fis3 install jquery@2.1.0 --save
+    $ npm install jquery@2.1.0 --save
+   
     
-    ```
+## 安装私有模块(采用私有仓库,简单易用,以bitbucket为例)
+
+    $ npm install git+ssh://git@bitbucket.org:ngfe/device.git --save
+    
+    var device = require('ngfe-widget-device');
     
 ## 开始开发
    
-    ```
     $ npm start
     
-    ```
    
 ## 打包dev版资源
   
-    ```
     $ npm run dev
-    
-    ```
   
 ## 打包prod版资源
 
-    ```
     $ npm run prd
-    
-    ```
    
 ## 构建说明
    1. 全局安装[fis3](http://fex-team.github.io/fis3/index.html) `npm install -g fis3`
