@@ -51,7 +51,7 @@ fis.match('/static/**', {
 
 // 本地模拟数据产出到根test目录下，否则无法模拟动态数据
 fis.match('/mock/**', {
-    release: '/test/$0'
+    release: '$0'
 });
 
 // fis模拟配置文件
