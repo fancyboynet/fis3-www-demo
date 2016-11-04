@@ -85,6 +85,19 @@ fis.match('node_modules/**.css', {
     postprocessor: null
 });
 
+//数据接口增加实际前缀
+fis.match('/widget/api/config.js', {
+    parser: function (content, file, opt) {
+        // 只对 html 类文件进行处理
+        if (!file.isJsLike){
+            return content;
+        }
+        return content.replace(/\{static_url_prefix\}/g, function(all, value) {
+            return configBuild.static_url_prefix ;
+        });
+    }
+});
+
 // 添加css和image加载支持
 fis.match('*.js', {
     preprocessor: [
@@ -110,19 +123,6 @@ fis.match('::packager', {
         resourceType: 'mod',
         useInlineMap: true // 资源映射表内嵌
     })
-});
-
-//数据接口增加实际前缀
-fis.match('/widget/api/config.js', {
-    parser: function (content, file, opt) {
-        // 只对 html 类文件进行处理
-        if (!file.isJsLike){
-            return content;
-        }
-        return content.replace(/\{static_url_prefix\}/g, function(all, value) {
-            return configBuild.static_url_prefix ;
-        });
-    }
 });
 
 
