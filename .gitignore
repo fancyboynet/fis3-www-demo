@@ -1,7 +1,5 @@
 node_modules
-
 output
-
 .idea
-
+npm-debug.log
 
