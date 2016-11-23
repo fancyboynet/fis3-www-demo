@@ -111,7 +111,8 @@ fis.match('*.js', {
 //babel
 fis.match('/{page,widget}/**.js', {
     parser: fis.plugin('babel-5.x', {
-        stage: 3
+        stage: 3,
+        blacklist: ["useStrict"]
     })
 })
 
