@@ -3,6 +3,6 @@
  * @module app/config/config
  * @author fancy <fancyboynet@gmail.com>
  */
-module.exports = {
+export default {
     CODE_COUNT_DOWN_TIME : 2 * 1000
-};
+}

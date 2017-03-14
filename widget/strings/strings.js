@@ -3,6 +3,6 @@
  * @module app/strings/strings
  * @author fancy <fancyboynet@gmail.com>
  */
-module.exports = {
+export default {
     HELLO : "hi"
-};
+}

@@ -3,6 +3,6 @@
  * @module app/api/config
  * @author fancy <fancyboynet@gmail.com>
  */
-module.exports = {
+export default {
     STATIC_URL_PREFIX : '{static_url_prefix}'
-};
+}

@@ -76,11 +76,11 @@ fis.match('**.tpl', {
 fis.match('**.css', {
     parser: fis.plugin('css-url-hash'),
     postprocessor: fis.plugin('autoprefixer', {
-        "browsers": ["last 2 versions", "ie 8"]
+        "browsers": ["last 2 versions"]
     })
 })
 
-fis.match('node_modules/**.css', {
+fis.match('/node_modules/**.css', {
     parser: null,
     postprocessor: null
 })
@@ -97,6 +97,17 @@ fis.match('*.js', {
 
 //babel
 fis.match('/{page,widget}/**.js', {
+    parser: fis.plugin('babel-5.x', {
+        stage: 3,
+        blacklist: ["useStrict"]
+    })
+})
+
+fis.match('*.{es6, es}', {
+    isJsLike: true,
+    rExt : 'js',
+    isMod: true,
+    useSameNameRequire: true,
     parser: fis.plugin('babel-5.x', {
         stage: 3,
         blacklist: ["useStrict"]
