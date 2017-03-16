@@ -76,7 +76,7 @@ fis.match('**.tpl', {
 fis.match('**.css', {
     parser: fis.plugin('css-url-hash'),
     postprocessor: fis.plugin('autoprefixer', {
-        "browsers": ["last 2 versions"]
+        "browsers": ["last 2 versions","Android >= 4.0"]
     })
 })
 
