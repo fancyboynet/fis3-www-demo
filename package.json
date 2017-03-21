@@ -1,6 +1,6 @@
 {
   "name": "fis3-www-demo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于fis3的PC端纯静态解决方案",
   "author": "Fancy <fancyboynet@gmail.com>",
   "repository": "https://github.com/fancyboynet/fis3-www-demo.git",
@@ -12,24 +12,21 @@
     "prod": "node scripts/product.js"
   },
   "devDependencies": {
-    "buffer": "^4.9.1",
     "chalk": "^1.1.3",
     "fis-parser-babel-5.x": "^1.4.0",
     "fis-parser-utc": "0.0.2",
     "fis-postprocessor-autoprefixer": "0.0.5",
-    "fis3-hook-commonjs": "^0.1.25",
-    "fis3-hook-node_modules": "^1.1.7",
+    "fis3-hook-commonjs": "^0.1.26",
+    "fis3-hook-node_modules": "^2.2.8",
     "fis3-parser-css-url-hash": "0.0.5",
     "fis3-parser-html-uri": "^1.0.1",
-    "fis3-postpackager-loader": "^1.5.3",
+    "fis3-postpackager-loader": "^2.1.4",
     "fis3-preprocessor-js-require-css": "^0.1.0",
     "fis3-preprocessor-js-require-file": "^0.1.0",
     "is-buffer": "^1.1.4",
-    "process": "^0.11.9",
     "shelljs": "^0.6.1"
   },
   "dependencies": {
-    "html5shiv": "^3.7.3",
     "jquery": "^1.11.3",
     "ngfe-widget-device": "git+ssh://git@bitbucket.org/ngfe/device.git",
     "normalize.css": "^4.0.0"

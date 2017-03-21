@@ -140,7 +140,8 @@ fis.match('::packager', {
 // 禁用components
 fis.unhook('components')
 fis.hook('node_modules', {
-    useDev: false
+    ignoreDevDependencies: true,
+    shimProcess : false
 })
 
 //生产环境

@@ -7,7 +7,6 @@
 ## 准备
 
     $ npm install -g fis3
-    $ npm install process buffer is-buffer --save-dev
     $ npm install
     
 
@@ -21,7 +20,7 @@
 
     $ npm install git+ssh://git@bitbucket.org:ngfe/device.git --save
     
-    var device = require('ngfe-widget-device');
+    let device = require('ngfe-widget-device');
     
 ## 开始开发
    
@@ -98,3 +97,11 @@
 1. static 对应服务端的static目录
 2. template 对应服务端的template目录
 3. test 还是一些测试数据、用例
+
+### 问题
+目前暂时仍然使用babel-5.x进行转译,对es6中内置对象新增的方法还不支持
+
+### 升级到babel-6.x前要解决的问题
+
+1. 去掉'use strict'的方法
+2. "transform-runtime"产生的脚本默认会比jquery更早加载,会导致原来的业务脚本打包时分成两个文件
