@@ -34,6 +34,10 @@
 ## 打包prod版资源
 
     $ npm run prd
+    
+## 打包带hash的prod版资源
+
+    $ npm run prod-with-hash
    
 ## 构建说明
    1. 全局安装[fis3](http://fex-team.github.io/fis3/index.html) `npm install -g fis3`
