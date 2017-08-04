@@ -19,7 +19,7 @@ if (shell.test('-d', staticRootPath)) {
 if (shell.test('-d', tplRootPath)) {
     shell.rm('-rf', tplRootPath + '/*');
 }
-shell.exec('fis3 release prod -cd ' + outputPath);
+shell.exec('fis3 release prod-with-hash -cd ' + outputPath);
 
 //拷贝资源
 // let destStaticRoot = path.resolve(configBuildPath, '../../../../public/' + configBuild.static_root + '/');
