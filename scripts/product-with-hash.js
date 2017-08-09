@@ -6,8 +6,8 @@ let path = require('path');
 
 let configBuildPath = path.resolve(__dirname, '../config/build.json');
 let outputPath = path.resolve(configBuildPath, configBuild.output);
-let staticRootPath = path.resolve(outputPath, configBuild.static_root);
-let tplRootPath = path.resolve(outputPath, configBuild.tpl_root);
+let staticRootPath = path.resolve(outputPath, configBuild.staticRoot);
+let tplRootPath = path.resolve(outputPath, configBuild.tplRoot);
 
 if (!shell.which('fis3')) {
     console.log(chalk.red('请先安装fis3'));
@@ -22,5 +22,5 @@ if (shell.test('-d', tplRootPath)) {
 shell.exec('fis3 release prod-with-hash -cd ' + outputPath);
 
 //拷贝资源
-// let destStaticRoot = path.resolve(configBuildPath, '../../../../public/' + configBuild.static_root + '/');
+// let destStaticRoot = path.resolve(configBuildPath, '../../../../public/' + configBuild.staticRoot + '/');
 // shell.cp('-rf', staticRootPath + '/', destStaticRoot);

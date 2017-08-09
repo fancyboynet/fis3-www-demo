@@ -9,7 +9,8 @@
     color: lime;
     font-size: 100px;
 }
-.mod-google{
+.mod-google,
+.mod-google2{
     width: 1000px;
     height: 500px;
     /*background: url("./images/google.jpg");*/
@@ -17,4 +18,7 @@
     /*background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");*/
     background-size: contain;
     background-repeat: no-repeat;
+}
+.mod-google2{
+    background-image: url("/static/images/google-logo.png");
 }

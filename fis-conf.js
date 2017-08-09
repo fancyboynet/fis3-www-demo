@@ -1,8 +1,8 @@
 "use strict"
 let configBuild = require('./config/build.json')
 
-let staticRoot = configBuild.static_root //实际静态资源根目录
-let tplRoot = configBuild.tpl_root //模版根目录
+let staticRoot = configBuild.staticRoot //实际静态资源根目录
+let tplRoot = configBuild.tplRoot //模版根目录
 
 fis.hook('commonjs')
 
@@ -122,7 +122,7 @@ fis.match('/widget/api/config.js', {
             return content
         }
         return content.replace(/\{static_url_prefix\}/g, function(all, value) {
-            return configBuild.static_url_prefix
+            return configBuild.staticUrlPrefix
         })
     }
 })
@@ -174,13 +174,9 @@ fis.media(currentMedia)
     .match('*.png', {
         optimizer: fis.plugin('png-compressor') // 用 fis-optimizer-png-compressor 压缩 png 图片
     })
-    .match('*.{png,gif,jpg,jpeg}', { //图片引用增加url前缀
+    .match('*.{png,gif,jpg,jpeg,eot,ttf,woff,svg}', { //静态资源引用增加url前缀
         useHash : useHash,
-        url : configBuild.static_url_prefix  + staticRoot + '$0'
-    })
-    .match('*.{eot,ttf,woff,svg}', { //字体引用增加url前缀
-        useHash : useHash,
-        url : configBuild.static_url_prefix  + staticRoot + '$0'
+        url : configBuild.staticUrlPrefix  + '/' + staticRoot + '$0'
     })
 
 // pack

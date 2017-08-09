@@ -1,7 +1,7 @@
 {
-  "static_root" : "/static",
-  "static_url_prefix" : "",
-  "tpl_root" : "/templates",
+  "staticRoot" : "static",
+  "staticUrlPrefix" : "",
+  "tplRoot" : "templates",
   "port" : 8385,
   "output" : "../../output"
 }
