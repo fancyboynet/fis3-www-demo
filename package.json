@@ -1,6 +1,6 @@
 {
   "name": "fis3-www-demo",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "基于fis3的PC端纯静态解决方案",
   "author": "Fancy <fancyboynet@gmail.com>",
   "repository": "https://github.com/fancyboynet/fis3-www-demo.git",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "chalk": "^1.1.3",
-    "fis-parser-babel-5.x": "^1.4.0",
+    "fis-parser-babel-6.x": "^6.24.1",
     "fis-parser-utc": "0.0.2",
     "fis-postprocessor-autoprefixer": "0.0.5",
     "fis3-hook-commonjs": "^0.1.26",
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "jquery": "^1.11.3",
-    "ngfe-widget-device": "git+ssh://git@bitbucket.org/ngfe/device.git",
     "normalize.css": "^4.0.0"
   }
 }

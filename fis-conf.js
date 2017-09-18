@@ -14,6 +14,8 @@ fis.set('project.ignore', fis.get('project.ignore').concat([
     'scripts/**',
     'component.json',
     'package.json',
+    'package-lock.json',
+    '*.iml',
     'test/**'
 ]))
 
@@ -97,10 +99,7 @@ fis.match('*.js', {
 
 //babel
 fis.match('/{page,widget}/**.js', {
-    parser: fis.plugin('babel-5.x', {
-        stage: 3,
-        blacklist: ["useStrict"]
-    })
+    parser: fis.plugin('babel-6.x')
 })
 
 fis.match('*.{es6, es}', {
@@ -108,10 +107,7 @@ fis.match('*.{es6, es}', {
     rExt : 'js',
     isMod: true,
     useSameNameRequire: true,
-    parser: fis.plugin('babel-5.x', {
-        stage: 3,
-        blacklist: ["useStrict"]
-    })
+    parser: fis.plugin('babel-6.x')
 })
 
 //数据接口增加实际前缀
